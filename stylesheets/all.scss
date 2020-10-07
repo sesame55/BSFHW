@@ -1,0 +1,33 @@
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "helpers/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// 首頁
+//上方jumbotron內容
+@import 'components/header-bg';
+// 上方card毛玻璃效果
+@import 'components/card-header';
+// 中間廣告區塊
+@import 'components/vertical';
+// 商品列表
+@import 'components/card-product';
+// 頁尾
+@import 'components/footer';
+
+// 登入頁
+@import 'components/signIn';
+
+// 購物車
+@import 'components/cart';
+
+// 結帳
+@import 'components/checkout';
+
+
+
+// 測試用
+@import 'components/box';

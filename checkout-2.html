@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/favicon.ico" />
+    <title>dessert-checkout-1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+    <!-- 上方選單 -->
+    <div class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <!-- 摺疊選單 -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 標題 -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo-all-dark.svg" height="40" class="d-none d-md-inline-block" alt="">
+                    <!-- 預設none，md以上出現 -->
+                    <img src="img/logotype-sm-dark.svg" height="18" class="d-inline-block d-md-none " alt="">
+                    <!-- 預設出現，md以上消失 -->
+                </a>
+                <!-- 購物車圖案 ，不能放在下拉選單後，會一起被做成選單-->
+                <div class="order-lg-1">
+                    <!-- 改順序，因為外層有flex設定，
+                    order-1會越過沒有加order的選項出現在最右方，
+                    加lg是避免下拉選單出現時被拉進選項-->
+                    <a href="cart.html" class="btn btn-transparent ">
+                        <i class="fas fa-shopping-cart text-success" style="font-size:24px;"></i>
+                    </a>
+                </div>
+                <!-- 摺疊後的下拉選單 -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto  font-weight-bold text-center ">
+                        <li class=" nav-item">
+                            <a class="nav-link " href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="product.html">甜點</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="signIn.html">登入</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 結帳區塊 -->
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 px-0 ">
+                <div class="d-flex flex-column p-3  bg-success checkout-basis">
+                    <!-- 標題和進度條 -->
+                    <div class="d-flex justify-content-between mb-3">
+                        <h2 class="text-secondary">付款</h2>
+                        <div class="pro w-50">
+                            <div class="pro-step complete ">
+                                <i class="fas fa-check-circle complete-step"></i>
+                            </div>
+                            <div class="pro-step active"></div>
+                            <div class="pro-step"></div>
+                        </div>
+                    </div>
+                    <form class="text-secondary mb-6 checkout-form">
+                        <div class="form-group">
+                            <label for="credit-card" class="h5">信用卡卡號</label>
+                            <div class="input-group checkout-icon d-flex justify-content-between flex-nowrap ">
+                                <input type="text" class="form-control form-control-lg rounded-0 bg-secondary"
+                                    id="credit-card" placeholder="9012-3456-7890-1234">
+                                <div class="input-group-append ml-0">
+                                    <span class="input-group-text rounded-0 border-0">
+                                        <i class="far fa-credit-card"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="lastName" class="h5">持卡人姓名</label>
+                                <input type="text" class="form-control form-control-lg rounded-0 bg-secondary" id="lastName"
+                                    placeholder="王">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="firstName" class="h5 text-success">名字</label>
+                                <input type="text" class="form-control form-control-lg rounded-0 " id="firstName"
+                                    placeholder="小明">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="address" class="h5">有效期限</label>
+                                <select id="address" class="form-control form-control-lg rounded-0">
+                                    <option selected>月</option>
+                                    <option>1月</option>
+                                    <option>2月</option>
+                                    <option>3月</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="state" class="text-success">年</label>
+                                <select id="state" class="form-control form-control-lg rounded-0">
+                                    <option selected>年</option>
+                                    <option>XX</option>
+                                    <option>XX</option>
+                                    <option>XX</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="lastName" class="h5">背面末三碼</label>
+                                <input type="number" class="form-control form-control-lg rounded-0 " id="lastName"
+                                    placeholder="123">
+                            </div>
+                        </div>
+                    </form>
+                    <a href="checkout-3.html" class="checkout-btn btn btn-warning w-100 rounded-0 text-success">下一步</a>
+                </div>
+            </div>
+            <div class="d-none d-md-block col-md-4">
+                <div class="checkout-detail w-100 ">
+                    <h4 class="text-center py-2 border-bottom font-weight-bold">訂單摘要</h4>
+                    <div class="d-flex justify-content-between   text-accent mt-2 px-2">
+                        <span>小計</span>
+                        <span>NT$ 2,700</span>
+                    </div>
+                    <div class="d-flex justify-content-between text-accent mt-1 px-2">
+                        <span>運費</span>
+                        <span>NT$ 300</span>
+                    </div>
+                    <div class="d-flex justify-content-between text-accent mt-1 px-2">
+                        <span class="h5">總計</span>
+                        <span class="h5">NT$ 3,000</span>
+                    </div>
+                </div>
+                <div class="checkout-detail w-100 mt-2">
+                    <h4 class="text-center py-2 border-bottom font-weight-bold">購物清單</h4>
+                    <div class="d-flex justify-content-between   text-accent mt-2 px-2">
+                        <div class="checkout-img checkout-img-A"></div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <span>焦糖馬卡龍（2）</span>
+                            <span class="h5">NT$ 900</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between   text-accent mt-2 px-2">
+                        <div class="checkout-img checkout-img-A"></div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <span>焦糖馬卡龍（2）</span>
+                            <span class="h5">NT$ 900</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between   text-accent mt-2 px-2">
+                        <div class="checkout-img checkout-img-A"></div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <span>焦糖馬卡龍（2）</span>
+                            <span class="h5">NT$ 900</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 訂閱 -->
+    <div class="mt-0 mt-md-4 bg-success">
+        <div class="container px-3 px-md-0">
+            <div class="row py-3 d-flex justify-content-center">
+                <div class="col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <img src="img/logo-light.svg" alt="" style="width: 40px;">
+                    <span class="text-secondary ml-2" style="font-size: 24px;">
+                        訂閱你我的甜蜜郵件
+                    </span>
+                </div>
+                <div class="mt-3 mt-md-0 col-md-5 d-flex align-items-center">
+                    <div class="input-group footer-email-group d-flex justify-content-between flex-nowrap">
+                        <label class="input-group-text rounded-0  ">
+                            <i class="fas fa-envelope"></i>
+                        </label>
+                        <input type="email" class="rounded-0 bg-secondary w-100" id="email">
+                        <button type="submit" class="btn btn-warning rounded-0 ">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 頁尾 -->
+    <footer class="py-3 bg-secondary">
+        <div class="container pt-1 px-3 px-md-0">
+            <div class="row d-flex justify-content-center">
+                <div class="col col-md-5 d-flex flex-column justify-content-between">
+                    <div class="footer-img-left">
+                        <img src="img/logotype-lg-dark.svg" alt="" style="height: 27px;">
+                    </div>
+                    <ul class="footer-text pl-0 ml-0 mt-4 mt-md-0">
+                        <li>07-1234-5678</li>
+                        <li>sweetaste@email.com</li>
+                        <li>800 高雄市新興區幸福路 520 號</li>
+                    </ul>
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                    <div class="foot-img-right d-flex justify-content-end mt-n1">
+                        <img src="img/sm-今天是個吃甜點的好日子.svg" alt="" style="width: 60px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center pt-3 align-items-end ">
+                <div class="col-md-5">
+                    <a href="#"><img src="img/ic-line@.svg" alt="" style="width: 32px;"></a>
+                    <a href="#"><img src="img/ic-facebook.svg" alt="" style="width: 32px;"></a>
+                </div>
+                <div class="col-md-5 d-flex justify-content-md-end text-success px-md-0 mt-2 mt-md-0">
+                    <span>© 2018 Sweetaste* All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

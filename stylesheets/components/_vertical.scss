@@ -1,0 +1,32 @@
+
+.vertical-basis{
+    height: 420px;
+    @media (max-width:767px) {
+        height: auto;
+    }
+}
+
+// 上方圖片
+.vertical-top-bg{
+    background: url(https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60);
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+}
+// 下方圖片
+.vertical-bottom-bg{
+    background: url(https://images.unsplash.com/photo-1501432781167-c0ccfd492297?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=621c4e9986fba1c4514dfdc30e095bd2&auto=format&fit=crop&w=600&q=60);
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+}
+
+// 文字
+.vertical-md-text {
+    max-height: 420px; //外層寬度
+    writing-mode: vertical-rl;//垂直，從右對齊
+    line-height: 2;
+        @media (max-width:767px) {
+        writing-mode: horizontal-tb;//水平
+    }
+}

@@ -1,0 +1,11 @@
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+@each $color, $value in $theme-colors {//名稱，值
+    .box-#{$color} {
+        background-color:$value;
+        color: color-yiq($value);
+    }
+}

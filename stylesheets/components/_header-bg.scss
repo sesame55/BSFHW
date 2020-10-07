@@ -1,0 +1,41 @@
+// 首頁
+.header-bg {
+    background: url(https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=925&q=80);
+    background-size: cover;
+    background-position: center;
+    height: 496px;
+}
+
+// 產品頁
+.header-bg-product {
+    background: url(https://images.unsplash.com/photo-1512484457149-266d165a4eca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=786581a33fd6c9343735655439ce2e5a&auto=format&fit=crop&w=1380&q=80);
+    background-size: cover;
+    background-position: center;
+    height: 496px;
+    position: relative;
+    @media (max-width: 767px) {
+        height: 277px;
+    }
+    img {
+        width: 90px;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        @media (max-width: 767px) {
+            width: 60px;
+            top: 30px;
+            right: 30px;
+        }
+    }
+}
+
+// 結帳成功
+.header-bg-success {
+    background: url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=1347&q=80);
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+        @media (max-width: 767px) {
+        height: 510px;
+    }
+}
